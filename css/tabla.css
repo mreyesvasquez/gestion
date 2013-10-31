@@ -1,0 +1,29 @@
+/*#ContieneTabla
+{
+    border: 2px solid skyblue;
+    width: 950px;
+    font-family:tahoma;
+    font-size: 12px;
+}*/
+.tr.over .td, .tr:hover .td {
+	background: #bcd4ec;
+        cursor: pointer;
+}
+.th{
+    background-color: #3e83c9;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 2px 11px;
+    text-align: center;
+    border-right: 1px solid #fff;
+    line-height: normal;
+}
+.td {
+	padding: 6px 11px;
+	border-bottom: 1px solid #95bce2;
+	vertical-align: top;
+        font-family: arial;
+        font-size: 12px;
+}

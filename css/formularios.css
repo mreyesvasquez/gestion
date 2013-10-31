@@ -1,0 +1,737 @@
+
+.ptitle{
+    text-align: center;
+    font-weight: bold;
+    font-variant:small-caps;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 4px 0 4px 0;
+}
+.ptitlere{
+    background-color:#fff;
+    clear:both;
+    width: 100%;
+    background: #fff url(../images/lineareporte.jpg) no-repeat scroll 0 0 ;
+    height:60px;
+}
+.pformu{
+    width: 90%;
+    height: 412px;
+    clear:both;
+   margin-top: 20px;
+   margin-left: 40px;
+        border: 1px solid #ccc;
+     
+      
+
+}
+
+.pformu23{
+    width: 90%;
+    height: 800px;
+    clear:both;
+   margin-top: 20px;
+   margin-left: 40px;
+        border: 1px solid #ccc;
+
+
+
+}
+#formu23{
+    width: 90%;
+    height: 800px;
+    clear:both;
+   margin-top: 20px;
+   margin-left: 40px;
+        border: 1px solid #ccc;
+
+
+
+}
+.pformu4{
+    width: 100%;
+    clear:both;
+
+}
+.pformu1{
+    width: 100%;
+    height: 300px;
+    clear:both;
+    margin-top: 20px;
+}
+.pformu1re{
+    width: 100%;
+    clear:both;
+    margin-top: 5px;
+}
+.ptop{
+    width: 100%;
+    clear:both;
+    border-top: 1px solid #dcdcdc;
+    text-align: center;
+}
+.ptop1, .ptop2{
+    float: left;
+    width: 50%;
+}
+.pmidle1{
+    width: 100%;
+}
+.pmidle156{
+    width: 100%;
+}
+.pmidle5{
+    margin: 2px;
+    color: #004080;
+    font-weight: bold;
+}
+.pmidle4{
+    width: 50%;
+    float:left;
+}
+.pmidle3{
+    width: 50%;
+    float: right;
+    background-color:#004080;
+}
+.pmidle2{
+    width: 100%;
+    padding-top: 10px;
+}
+.ptabla1{
+    margin:0 auto;
+}
+.pmidle{
+    width: 100%;
+    clear:both;
+    border-top: 1px solid #dcdcdc;
+}
+.pmidle69{
+    width: 100%;
+    clear:both;
+    border-top: 1px solid #dcdcdc;
+}
+.plabel7
+{
+    text-align: right;
+    font-weight: bold;
+    color: #004080;
+    width: 30%;
+    font-size: 11px;
+    padding-right: 10px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.plabelcard
+{    text-align: right;
+     font-weight: bold;
+     color: #004080;
+     width: 30%;
+     font-size: 10px;
+     padding-right: 10px;
+     margin-left: 10px;
+     margin-top: 40px;
+}
+.plabel
+{    text-align: right;
+     font-weight: bold;
+     color: #004080;
+      font-size: 12px;
+     padding-right: 10px;
+     margin-left: 30px;
+     margin-top: 40px;
+}
+.plabelre
+{    text-align: right;
+     color: #004080;
+     font-weight: bold;
+         width: 30%;
+     font-size: 12px;
+     padding-right: 10px;
+     margin-left: 30px;
+     margin-top: 40px;
+}
+.plabeljj
+{    text-align: right;
+     font-weight: bold;
+     color: #004080;
+     width: 60px;
+     font-size: 11px;
+}
+.plabelss
+{   background-color:#FFFFCC;
+    text-align: center;
+    font-weight: bold;
+    color:#004080;
+    font-size: 11px;
+    width: 60px;
+    border:0px #ffffff none;
+}
+.plabelss1
+{   background-color:#Fdfdfd;
+    text-align: center;
+    font-weight: bold;
+    color:#004080;
+    font-size: 11px;
+    width: 60px;
+    border:0px #ffffff none;
+}
+.plabelrojo
+{   background: #FCFDFD;
+    text-align: center;
+    font-weight: bold;
+    color:#ff0000;
+    font-size: 11px;
+    width: 60px;
+    border:0px #ffffff none;
+}
+.pl
+{  
+    text-align: right;
+    font-weight: bold;
+    color: #004080;
+    width: 30%;
+    height: 30px;
+    font-size: 11px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-top: 40px;
+}
+.plabel8
+{    text-align: left;
+     color: #004080;
+     margin-left: 4px;
+     margin-right: 3px;
+     font-size: 11px;
+}
+.actualizar
+{
+    text-align: right;
+    font-weight: bold;
+    color: #004080;
+    width: 30%;
+    font-size: 11px;
+    padding-right: 5px;
+    background-color:#FFFFCC;
+    margin-top: 40px;
+}
+.plabel2
+{
+    text-align: right;
+    font-weight: bold;
+    color: #004080;
+    width: 30%;
+    font-size: 11px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+.plabel3
+{
+    text-align: center;
+    font-weight: bold;
+    color: #004080;
+    font-size: 11px;
+    padding: 2px;
+}
+legend{
+    font-weight: bold;
+}
+.ctrltextos
+{    font-family: Verdana;
+     font-size: 11px;
+     height: 20px; 
+     border: 1px solid skyblue;
+}
+.ctrltextosre
+{
+    font-family: Verdana;
+    font-size: 13px;
+    padding: auto;
+    margin:auto;
+    color:#444444;
+    
+}
+.pgrid{
+    width: 100%;
+    clear:both;
+    padding: 5px 0 5px 0;
+}
+.pgrid2{
+    width: 100%;
+    clear:both;
+    padding: 5px 0 5px 0;
+    height: 240px;
+}
+.dataShow{
+    width: 100%;
+    border: 0;
+}
+.ItemGrid{
+    width: 100%;
+   height: 120px;
+ overflow: auto;
+
+
+}
+.mpptitle
+{
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    clear: both;
+    border-bottom: 1px solid #3D85DE;
+    text-align: center;
+    height: 30px;
+}
+.mpptitlere
+{
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: bold;
+    color: #004080;
+    clear: both;
+    border-bottom: 1px solid #5c5c5c;
+    text-align: center;
+    height: 30px;
+}
+.mppHead23{
+    clear:both;
+    width: 96%;
+    height: 25px;
+    padding: 5px 0 5px 0;
+    
+    font-size: 11px;
+    font-weight: normal;
+    font-family: verdana;
+    color: #000;
+    text-align: left;
+}
+.mppHead{
+    clear: both;
+    width: 100%;
+    height: 35px;
+    padding: 5px 0 5px 0;
+    background-color: skyblue;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+}
+.mppHead1{
+    clear:both;
+    width: 100%;
+    height: 35px;
+    padding: 5px 0 5px 0;
+    background-color: skyblue;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+}
+.mppitem1{
+    padding: 5px;
+    float:left;
+    text-align: right;
+    width: 90px;
+}
+.mppitem2{
+    padding: 5px;
+    float:left;
+    width: 200px;
+}
+.mppitem23{
+    float:left;
+    width: 200px;
+}
+.mppitem22{
+    float:left;
+    width: 200px;
+}
+.mppitem3{
+    padding: 5px;
+    float:right;
+    width: 100px;
+}
+.mppFotter{
+    clear:both;
+    width: 100%;
+    background: #333 url(../images/log.jpg) no-repeat scroll 0 0 ;
+    background-position: right;
+    height:60px;
+}
+.divpopupdata{
+    width: 100%;
+    clear: both;
+    height: 380px;
+    overflow-y: scroll;
+}
+.datagrid, .datagrid2{
+    width: 100%;
+    font-size: 11px;
+    border: 0;    
+}
+.datagrid th, .datagrid2 th{
+    color: #ffffff;
+    background-color: #004080;
+    padding: 4px 0;
+}
+.datagrid tr, .datagrid2 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid td, .datagrid2 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid th:hover{
+    cursor: default;
+}
+.datagrid tr:hover{
+    background-color:#d7dfdf;
+    cursor: pointer;
+}
+.datagrid3{
+    width: 100%;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+    border:1px #c5c5c5 solid;
+}
+.datagrid3 th{
+    color: #FFF;
+    background-color:#F5C32E;
+    padding: 4px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid3 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid3 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid3 th:hover{
+    cursor: default;
+}
+.datagrid3 tr:hover{
+    background-color:#d7dfdf;
+    cursor: pointer;
+}
+.datagrid4{
+    width: 60%;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+    border:1px #c5c5c5 solid;
+}
+.datagrid4 th{
+    color: #FFF;
+    background-color:#F5C32E;
+    padding: 4px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid4 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid4 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid4 th:hover{
+    cursor: default;
+}
+.datagrid4 tr:hover{
+    background-color:#d7dfdf;
+    cursor: pointer;
+}
+.datagrid5{
+    width: 40%;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+}
+.datagrid5 th{
+    color: #FFF;
+    background-color:#76B138;
+    padding: 4px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid5 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid5 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid5 th:hover{
+}
+.datagri5 tr:hover{
+    background-color:#d7dfdf;
+}
+.datagrid6{
+    width: 100%;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+}
+.datagrid6 th{
+    color: #FFF;
+    background-color:#76B138;
+    padding: 4px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid6 tr{
+    padding: 3px 0;
+}
+.datagrid6 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+    padding: 4px 0;
+    text-align: center;
+}
+.datagrid6 th:hover{
+}
+.datagrid6 tr:hover{
+    background-color:#d7dfdf;
+}
+.datagrid7{
+    width: 70%;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+}
+.datagrid7 th{
+    font-weight: BOLD;
+    color: #FFF;
+    background-color:#76B138;
+    padding: 4px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid7 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid7 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid7 th:hover{
+}
+.datagrid7 tr:hover{
+    background-color:#d7dfdf;
+    cursor: pointer
+}
+.paginador{
+    color:#333;
+    padding:5px;
+    text-align:left;
+    color:#004080;
+    cursor:pointer;
+    font-weight: bold;
+    font-size: 13px;
+    border:1px solid #ccc;
+}
+.paginador:hover{
+    text-align:left;
+    padding:5px;
+    cursor:pointer;
+    font-weight: bold;
+    font-size: 13px;
+    border:1px solid #ccc;
+}
+.paginadoractivo{
+    text-align:left;
+    background-color:#004080;
+    color:#fff;
+    padding:5px;
+    cursor:pointer;
+    font-size: 13px;
+    border:1px solid #ccc;
+}
+.dvicons
+{
+    clear: both;
+    width: 100%;
+    text-align: center;
+    background-color: #FCFDFD;
+}
+.tbicons{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 13px;
+    font-weight: bold;
+    color: #3D85DE;
+}
+.tbicons a{
+    text-decoration:none;
+    color: #ffffff;
+}
+.css
+{width: 40%;
+ height: 120px;
+ overflow: auto;
+ position: absolute;
+ margin: auto;
+ padding: auto;
+}
+.css3
+{     width:40%;
+      padding:auto;
+      margin: AUTO;
+      height: 300px;
+      overflow: auto;
+
+      margin: auto;
+      padding: auto;
+
+}
+.css2
+{width: 100%;
+ padding:auto;
+ margin: AUTO;
+ height: 400px;
+ overflow: auto;
+ margin: auto;
+ padding: auto;
+
+}
+.css23
+{width: 100%;
+ padding:auto;
+ margin: AUTO;
+ height: 400px;
+ overflow: auto;
+ margin: auto;
+ padding: auto;
+}
+.css1
+{    width:220px;
+     height: 350px;
+     overflow: auto;
+     margin: auto;
+     padding: auto;
+}
+.datagrid9{
+    width:200px;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+}
+.datagrid9 th{
+    color: #FFF;
+    background-color:#76B138;
+    padding: 4px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid9 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid9 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid9 th:hover{
+}
+.datagrid9 tr:hover{
+    background-color:#d7dfdf;
+}
+.plab3
+{    text-align: right;
+     font-weight: bold;
+     color: #004080;
+     width: 80%;
+     font-size: 12px;
+     padding-right: 10px;
+     margin-left: 180px;
+     margin-top: 40px;}
+.plab
+{    text-align: right;
+     font-weight: bold;
+     color: #004080;
+     width: 30%;
+     font-size: 12px;
+     padding-right: 10px;
+     margin-left: 270px;
+     margin-top: 40px;}
+.plabfecha
+{    text-align: right;
+     font-weight: bold;
+     color: #004080;
+     width: 30%;
+     font-size: 11px;
+     padding-right: 10px;
+     margin-left: 270px;
+     margin-top: 40px;}
+.datagrid0{
+    width: 95%;
+    font-size: 11px;
+    border: 0;
+    text-align: center;
+    padding:auto;
+    margin: AUTO;
+}
+.datagrid0 th{
+    color: #fff;
+    background-color:#9DD06A;
+    padding: 2px 0;
+    text-align: center;
+    border:1px #c5c5c5 solid;
+}
+.datagrid0 tr{
+    padding: 3px 0;
+    height: 20px;
+}
+.datagrid0 td{
+    border-bottom-color: #c5c5c5;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+}
+.datagrid0 th:hover{
+}
+.datagri0 tr:hover{
+    background-color:#d7dfdf;
+}
+#recabezera{
+    width: 100%;
+    height: 90px;
+
+
+}
+#recabearriba{
+    height: 90px;
+    float: right;
+}
+#recabeabajo{
+       height: 70px;
+    float: left;
+}
