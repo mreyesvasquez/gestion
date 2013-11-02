@@ -223,6 +223,53 @@ if ($_SESSION['user'] == "") {
                     </div>
                 </td>
             </tr>
+            <tr>
+            <td colspan="3" align="center">
+            <div id="lineaResultado">
+			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
+			  	<tr>
+                                    <?php
+                        $query_count = "select count(*) as total from personal";
+                        $result_count = mysql_query($query_count);
+                        $total = mysql_fetch_array($result_count);
+                    ?>
+                                    <td width="50%" align="left">N de Personas encontradas <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly value="<?= $total['total']?>" style="text-align: center; font-size: 12px;"></td>
+				<td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
+		          </select></td>
+			  </table>
+            </div>
+                
+            <div id="cabeceraResultado" class="header">
+                RELACION de PERSONAL </div>
+                    <div id="frmResultado">
+                    
+                    <table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
+                                    <tr class="cabeceraTabla">
+                                            <td width="8%">ITEM</td>
+                                            <td width="6%">DESCRIPCION</td>
+                                            <td width="13%">ESTADO</td>
+                                    </tr>
+                                    
+                                        <?php
+                                            $query = "select * from personal";
+                                            $result = mysql_query($query);
+                                            
+                                            while($area = mysql_fetch_array($result)){?>
+                                                <tr>
+                                                    <td align="center"><?= $area['areascodigo']?></td>
+                                                    <td align="center"><?= $area['areasdescripcion']?></td>
+                                                    <td align="center"><?= $area['areasestado']?></td>
+                                                    
+                                                </tr>
+                                            <?php }
+                                        ?>
+                                    
+                    </table>
+                    </div>
+                       
+                    
+            </td>
+           </tr>
         </table>
         </center>
         <div style="display:none">

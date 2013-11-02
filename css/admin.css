@@ -50,26 +50,29 @@ p
 }
 #inicio{
     height:35px;
-    width:4%;
-    float: left;  
+    width:0px;
+    float: right;  
 }
 #subopciones{
     height:35px;
-    width:95%;
+    width:50%;
     float: right;
     padding-top: 8px;
-    color: white;
+    color: black;
     font-weight: bolder;
     font-family: tahoma;
 }
+/* sirve para ajustar el saludo y usuario*/
 #sep
 {
     height:25px;
-    width:100%;
-    background-color:#F2F2F2;
+    width:81%;
+    background-color:#1c94c4;
     text-align: right;
+    float: right;
     font-size: 13px;
     padding-top: 10px;
+    border:2px groove #1c94c4;
 }
 #sep > a:hover
 {
@@ -78,17 +81,25 @@ p
 }
 #cuerpo
 {
-    height:585px;
      width:100%;
     background-color:#FBF9FA;
 }
+
 #cuerpo_izquierda
 {
-    height:583px;
-    background-color:#F2F2F2;
+    height:638px;
+    background-color:#1c94c4;
     float: left;
     width: 18%;
-    border:2px groove #A9B5BE;
+    border:2px groove #1c94c4;
+}
+#image-menu
+{
+    height:10px;
+    float:left;
+    background-color:#1c94c4;
+    width: 18%;
+    border:2px groove #1c94c4;
 }
 #cicabecera
 {
@@ -104,9 +115,10 @@ p
 
 
 }
+/*sirve para poner el contenido*/
 #cuerpo_derecha
 {
-    height:583px;
+    height:auto !important;
     background-color:#FBF9FA;
     float: right;
     width: 81%;
@@ -114,7 +126,7 @@ p
 }
 #subnivel
 {
-    height:520px;
+    height: auto !important; 
     background:#Fff;
     width: 100%;
 

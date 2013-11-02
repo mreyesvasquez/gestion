@@ -11,42 +11,40 @@
     <body>
         <div id="contenedorlogin">
             <div id="cabeceralogin">
-                <di id="bannerizquierdalogin">
-                </di>
-                <div id="bannerderechalogin">
-                    <center>
-                        AREA DE MANTENIMIENTO ELECTROMECANICO
-                    </center>
+                <div id="bannerderechalogin" class="userNav">
+                    <ul>
+                        <li>
+                            <a><img src="images/userPic.png" alt="" />
+                                    <span>Administrador</span></a>
+                            </li></ul>
                 </div>
             </div>
             
             <div id="cuadrologin">
                 <br><br><br>
                 <form  id="formContacto" name="formContacto" >
-                    <table width="500" border="2" cellspacing=" 0" cellpadding="0" id="tablasesion">
+                    <table width="300" border="0" cellspacing=" 0" cellpadding="0" id="tablasesion">
+                        
                         <tr>
-                            <td colspan="2"><h5>ACCESO AL SISTEMA DE GESTION DE INCIDENCIAS</h5></td>
+                            <td align="center"><img src="images/files.png" alt="" style="float:left;margin-left: 32%;margin-top: 12px;" /><h5 style="float: left">Panel de Usuario</h5><p style="clear:both"></p></td>
                         </tr>
                         <tr>
-                            <td width="100" rowspan="1" style="background: white;">
-                                <center><img src="Imagenes/Banner/essaludbanner.jpg" ></center>
-                            </td>
                             <td>
                                 <table border="0" width="100%" cellspacing="0" cellpadding="3" id="tablasesion">
-                                    <tr>  <td style="height: 30px;"></td></tr>
+                                    <tr>  <td style="height: 20px;"></td></tr>
                                     <tr>
-                                        <td style="width: 30px" rowspan="7"></td>
+                                        <td style="width: 20px" rowspan="7"></td>
                                         <td><b>Usuario:</b></td>
                                     </tr>
                                     <tr>
-                                        <td><input style="height: 25px; width: 200px" type="text" name="usuario" id="usuario" maxlength="25"/></td>
+                                        <td><input style="height: 20px; width: 200px" type="text" name="usuario" id="usuario" maxlength="25" placeholder="Ingrese Nombre de Usuario" /></td>
                                     </tr>
                                     <tr><td style="height: 10px;"></td></tr>
                                     <tr>
                                         <td><b>Clave:</b></td> 
                                     </tr>
                                     <tr>
-                                        <td><input style="height: 25px; width: 200px" type="password" name="clave" id="clave"  maxlength="25"/></td>
+                                        <td><input style="height: 20px; width: 200px" type="password" name="clave" id="clave"  maxlength="25" placeholder="Ingrese Contraseña" /></td>
                                     </tr>
                                     <tr><td style="height: 10px;"></td></tr>
                                     <tr>
@@ -63,9 +61,7 @@
                     </table>
                 </form>
             </div>
-            <div id="pie"><h5>
-            Of. Principal Lima Av. San Borja Sur 474 - San Borja - Lima/ Sucursal Trujillo Prolongacion Union 1350 Trujillo / Teléfono: #721189 - #971150742| Informes </h5>
-            </div>
+            
         </div>
     </body>
 </html>

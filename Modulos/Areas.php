@@ -5,24 +5,6 @@ if ($_SESSION['user'] == "") {
 }else{
     include('../Conexion/conexion.php');
     $cn = Conectarse();
-    
-    
-    $cadena_busqueda="";
-if(isset($_GET["cadena_busqueda"])){
-
-   $cadena_busqueda=$_GET["cadena_busqueda"];
-}
-if ($cadena_busqueda<>"") {
-	$array_cadena_busqueda=split("~",$cadena_busqueda);
-	$areascodigo=$array_cadena_busqueda[1];
-	$areasdescripcion=$array_cadena_busqueda[2];
-	$areasestado=$array_cadena_busqueda[3];
-	} else {
-	$areascodigo="";
-	$areasdescripcion="";
-	$areasestado="";
-
-}
 ?>
 <html>
     <head>
@@ -48,23 +30,7 @@ if ($cadena_busqueda<>"") {
     ?>
     
     <body onLoad="NuevoArea();">
-        <div class="topNav">
-        <div class="wrapper">
-            <div class="welcome"><a href="#" title=""><img src="../images/userpic.png" alt="" /></a><span>CESAR EDUARDO IRRIBARREN OTINIANO ( 40200737 )</span></div>
-            <div class="userNav">
-                <ul>
-                    <li class="dd"><a title=""><img src="../images/profile.png" alt="" /><span>Perfil</span></a>
-                        <ul class="userDropdown">
-                            <li><a href="#" title="" class="sInbox">Editar Perfil</a></li>
-                            <li><a href="#" title="" class="sOutbox">Cambiar Contraseña</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="http://webdeveloper.decontsoft.com/sys_sciudadana/user/logout" title=""><img src="../images/logout.png" alt="" /><span>Cerrar Sesión</span></a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+        
         <center>
             <fieldset id="titulo">
                 REGISTRAR SERVICIOS
@@ -80,10 +46,6 @@ if ($cadena_busqueda<>"") {
                         <td style="padding-bottom: 5px;">
                 <input type="text" id="txtcodigo" class="Caja"readonly readonly value="G<?php echo $Cogg ?>" name="txtcodigo" class="ctrltextos" style="width: 100px;" >
 
-<td width="68%"><input id="codcliente" type="text" class="cajaPequena" NAME="codcliente" maxlength="10" 
- value="<? echo $codcliente?>"> <img src="../img/ver.png" width="16" height="16" onClick="abreVentana()" 
- title="Buscar cliente" onMouseOver="style.cursor=cursor"> <img src="../img/cliente.png" width="16" height="16"
- onClick="validarcliente()" title="Validar cliente" onMouseOver="style.cursor=cursor"></td>
                     </tr>
                     <tr>
                         <td><label style="padding-bottom: 5px;">Descripcion(*)</label></td>
@@ -132,44 +94,49 @@ if ($cadena_busqueda<>"") {
             <div id="lineaResultado">
 			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
 			  	<tr>
-				<td width="50%" align="left">N de clientes encontrados <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly></td>
+                                    <?php
+                        $query_count = "select count(*) as total from subareas";
+                        $result_count = mysql_query($query_count);
+                        $total = mysql_fetch_array($result_count);
+                    ?>
+                                    <td width="50%" align="left">N de Sub Areas encontradas <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly value="<?= $total['total']?>" style="text-align: center; font-size: 12px;"></td>
 				<td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
 		          </select></td>
 			  </table>
             </div>
+                
             <div id="cabeceraResultado" class="header">
-                RELACION de CLIENTES </div>
+                RELACION de AREAS </div>
                     <div id="frmResultado">
-                    <table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
+                    
+                    <table class="fuente8" width="100%" cellspacing=0 cellpadding="10" border=0 ID="Table1">
                                     <tr class="cabeceraTabla">
                                             <td width="8%">ITEM</td>
-                                            <td width="6%">CODIGO</td>
-                                            <td width="50%">DESCRIPCION </td>
+                                            <td width="6%">DESCRIPCION</td>
                                             <td width="13%">ESTADO</td>
-                                            <td width="5%">&nbsp</td>
-                                            <td width="5%">&nbsp;</td>
-                                            <td width="5%">&nbsp;</td>
-                                            <td width="6%">&nbsp;</td>
+                                            <td width="13%">ACCIONES</td>
                                     </tr>
+                                    
+                                        <?php
+                                            $query = "select * from areas";
+                                            $result = mysql_query($query);
+                                            
+                                            while($area = mysql_fetch_array($result)){?>
+                                                <tr>
+                                                    <td align="center"><?= $area['areascodigo']?></td>
+                                                    <td align="center"><?= $area['areasdescripcion']?></td>
+                                                    <td align="center"><?= $area['areasestado']?></td>
+                                                    <td align="center">
+                                                        <a href="#" onclick="editArea('<?= $area['areascodigo']?>');"><img src="../Imagenes/edit.png" width="24"></a>-<a href="#" onclick="viewArea('<?= $area['areascodigo']?>');"><img src="../Imagenes/view.png" width="24"></a>-<a href="#" onclick="deleteArea('<?= $area['areascodigo']?>');"><img src="../Imagenes/delete.png" width="24"></a>
+                                                    </td>
+                                                </tr>
+                                            <?php }
+                                        ?>
+                                    
                     </table>
                     </div>
-                        <input type="hidden" id="iniciopagina" name="iniciopagina">
-        		<input type="hidden" id="cadena_busqueda" name="cadena_busqueda">
-                    <div id="lineaResultado">
-
-					<iframe width="100%" height="250" id="frame_rejilla" name="frame_rejilla" frameborder="0">
-
-						<ilayer width="100%" height="250" id="frame_rejilla" name="frame_rejilla"></ilayer>
-
-					</iframe>
-
-					<iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">
-
-					<ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
-
-					</iframe>
-
-				</div>
+                       
+                    
             </td>
            </tr>
         </table>

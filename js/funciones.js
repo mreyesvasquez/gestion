@@ -81,6 +81,17 @@ function Areas()
         }
         );
 }
+function Cargo()
+{
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    $.post
+    ("../Modulos/Cargo.php",
+    {
+        },function(data){
+            $("#subnivel").html(data);
+        }
+        );
+}
 
 function AreasSub()
 {
@@ -408,4 +419,57 @@ function exel(){
         $("#datos_a_enviar").val($("<div>").append( $("#contenedorcabecera").eq(0).clone()).html());
         $("#frmdatos").submit();
     });
+}
+
+function editArea(area)
+{
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    $.post
+    ("../Modulos/editarArea.php", 
+    {codigo: area},
+    function(data){
+            $("#subnivel").html(data);
+        }
+        );
+}
+
+function saveArea(){
+    var vdescripcion = $("#descripcion").val();
+    var vestado = $("#estado option:selected").val();
+    var vcodigo = $("#codigo").val();
+    
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    
+    $.post
+    ("../Modulos/saveArea.php", 
+    {descripcion: vdescripcion, estado: vestado, codigo: vcodigo},
+    function(){
+            Areas();
+        }
+        );
+}
+
+function viewArea(area){
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    $.post
+    ("../Modulos/verArea.php", 
+    {codigo: area},
+    function(data){
+            $("#subnivel").html(data);
+        }
+        );
+}
+
+function deleteArea(area){
+    var r=confirm("¿Desea eliminar area?");
+    if (r==true)
+      {
+      $.post
+    ("../Modulos/eliminarArea.php", 
+    {codigo: area},
+    function(){
+            Areas();
+        }
+        );
+      }
 }

@@ -16,6 +16,7 @@ if ($_SESSION['user'] == "") {
         <link rel="stylesheet" type="text/css" href="../css/colorboxadmin.css">
         <script type="text/javascript" src="../js/Model.js"></script>
         <link rel="Stylesheet" type="text/css" href="../css/admin.css"/>
+        <link rel="Stylesheet" type="text/css" href="../css/estilos.css"/>
         <link rel="Stylesheet" type="text/css" href="../css/jquery-ui.css"/>
         <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="../js/AreaSub.js"></script>
@@ -103,6 +104,52 @@ if ($_SESSION['user'] == "") {
                     </div>
                 </td>
             </tr>
+            <tr>
+            <td colspan="3" align="center">
+            <div id="lineaResultado">
+			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
+			  	<tr>
+                                    <?php
+                        $query_count = "select count(*) as total from subareas";
+                        $result_count = mysql_query($query_count);
+                        $total = mysql_fetch_array($result_count);
+                    ?>
+                                    <td width="50%" align="left">N de Sub Areas encontradas <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly value="<?= $total['total']?>" style="text-align: center; font-size: 12px;"></td>
+				<td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
+		          </select></td>
+			  </table>
+            </div>
+                
+            <div id="cabeceraResultado" class="header">
+                RELACION de SUBAREAS </div>
+                    <div id="frmResultado">
+                    
+                    <table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
+                                    <tr class="cabeceraTabla">
+                                            <td width="8%">ITEM</td>
+                                            <td width="10%">DESCRIPCION</td>
+                                            <td width="10%">ESTADO</td>
+                                            <td width="13%">CODIGOAREA</td>
+                                    </tr>
+                                    
+                                        <?php
+                                            $query = "select * from subareas";
+                                            $result = mysql_query($query);
+                                            
+                                            while($area = mysql_fetch_array($result)){?>
+                                                <tr>
+                                                    <td align="center"><?= $area['subareascodigo']?></td>
+                                                    <td align="center"><?= $area['subareasdescripcion']?></td>
+                                                    <td align="center"><?= $area['subareasestado']?></td>
+                                                    <td align="center"><?= $area['areascodigo']?></td>
+                                                </tr>
+                                            <?php }
+                                        ?>
+                                    
+                    </table>
+                    </div>                                          
+            </td>
+           </tr>
         </table>
         </center>
         <div style="display:none">
