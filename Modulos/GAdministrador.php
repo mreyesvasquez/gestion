@@ -37,25 +37,20 @@ if ($_SESSION['user'] == "") {
             });
     </script>
     <body>
-
         <div id="contenedor">
                <div id="inicio">
                     <a href='Administrador.php'></a>
                 </div>
                 <div id="sep">
                     
-                    <img src='../Imagenes/persona.png' style="width: 15px; height: 15px">&nbsp;
+                    <img src='../Imagenes/users.png' style="width: 15px; height: 15px">&nbsp;
                     <b>HOLA:</b>&nbsp;<?php echo $rpersonal['Personal'] ?> | &nbsp;&nbsp;                    
                     <img src='../Imagenes/usuario.png' style="width: 15px; height: 15px">&nbsp;
                     <b>USUARIO:</b>&nbsp;<?php echo $_SESSION['user'] ?> | &nbsp;&nbsp;                         
                     <img src='../Imagenes/cancelar.png' style="width: 15px; height: 15px">&nbsp;
                     <a onclick="CerrarSesion();" style=" cursor: pointer;">CERRAR SESION</a> &nbsp;&nbsp;  
-                    
-            </div>
-                 
-            
-            <div id="cuerpo">
-                    
+                 </div>              
+            <div id="cuerpo">                    
                 <div id="cuerpo_izquierda">
                     <div class="image-menu" style="text-align: center">
                         <img src="../Images/logo_gestion.png" width="150">
@@ -66,10 +61,11 @@ if ($_SESSION['user'] == "") {
                                 <ul>
                                     <li class="menu-header">MANTENEDORES
                                         <ul>
-                                            <li><a onclick="Areas();">Areas</a></li>
+                                            <li><a onclick="Areas();">Servicios</a></li>
                                             <li><a onclick="Cargo ();">Cargo</a></li>
                                             <li><a onclick="AreasSub();">SubAreas</a></li>
-                                            <li><a onclick="Categorias();">E. Electromecanicos</a></li>
+                                            <li><a onclick="Categorias();">Equipos</a></li>
+                                            <li><a onclick="Uni_prestadora();">Unidad</a></li>
                                             <li><a onclick="Personal();">Personal</a></li>
                                             <li><a onclick="CrearUsuarios();">Usuarios</a></li>
                                         </ul>

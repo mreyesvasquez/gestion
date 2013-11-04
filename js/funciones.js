@@ -433,6 +433,18 @@ function editArea(area)
         );
 }
 
+function editSubArea(subarea)
+{
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    $.post
+    ("../Modulos/editarSubArea.php", 
+    {codigo: subarea},
+    function(data){
+            $("#subnivel").html(data);
+        }
+        );
+}
+
 function saveArea(){
     var vdescripcion = $("#descripcion").val();
     var vestado = $("#estado option:selected").val();
@@ -449,11 +461,38 @@ function saveArea(){
         );
 }
 
+function saveSubArea(){
+    var vdescripcion = $("#descripcion").val();
+    var vestado = $("#estado option:selected").val();
+    var vcodigo = $("#codigo").val();
+    
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    
+    $.post
+    ("../Modulos/saveSubArea.php", 
+    {descripcion: vdescripcion, estado: vestado, codigo: vcodigo},
+    function(){
+            AreasSub();
+        }
+        );
+}
+
 function viewArea(area){
     document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
     $.post
     ("../Modulos/verArea.php", 
     {codigo: area},
+    function(data){
+            $("#subnivel").html(data);
+        }
+        );
+}
+
+function viewSubArea(subarea){
+    document.getElementById("subnivel").innerHTML="<img src='../Imagenes/carga.gif'> Cargando...";
+    $.post
+    ("../Modulos/verSubArea.php", 
+    {codigo: subarea},
     function(data){
             $("#subnivel").html(data);
         }
@@ -469,6 +508,19 @@ function deleteArea(area){
     {codigo: area},
     function(){
             Areas();
+        }
+        );
+      }
+}
+function deleteSubArea(subarea){
+    var r=confirm("¿Desea eliminar area?");
+    if (r==true)
+      {
+      $.post
+    ("../Modulos/eliminarSubArea.php", 
+    {codigo: subarea},
+    function(){
+            AreasSub();
         }
         );
       }

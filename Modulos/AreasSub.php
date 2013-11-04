@@ -6,7 +6,7 @@ if ($_SESSION['user'] == "") {
     include('../Conexion/conexion.php');
     $cn = Conectarse();
     
-    $rsgerencias="select * from areas";
+    $rsgerencias="select * from subareas";
     $gerencias = mysql_query($rsgerencias);
 ?>
 <html>
@@ -79,30 +79,25 @@ if ($_SESSION['user'] == "") {
         <br>
         <table style="text-align: left; margin: 0 auto;color:#F08F01;font-size:11px;">
             <tr>
-                <td bgcolor="#E9F3FE">
-                    <div id="divSave" style="float: left;">
+                <td>
+                    <div id="divSave" style="float: left;margin-left: 35%">
                         <label style="cursor: pointer;" >
-                            <input id="btnSave" type="image" src="../images/guardar_1.png" onclick="GuardarAreaSub();">
-                            Guardar
-                        </label>
+                            <input id="btnSave" type="image" src="../images/botonaceptar.jpg" onclick="GuardarArea();">
+                         </label>
                     </div>
-                </td>
-                <td bgcolor="#E9F3FE">
-                    <div id="divEdit" style="float: left;">
-                        <label  style="cursor: pointer;">
-                            <input id="btnEdit" type="image" src="../images/modificar.png">
-                            Modificar
-                        </label>
-                    </div>
-                </td>
-                <td bgcolor="#E9F3FE">
+                    
                     <div id="divCancel" style="float: left;">
                         <label  style="cursor: pointer;">
-                            <input id="btnCancel" type="image" src="../images/limpiar.png" onclick="CancelarAreaSub();">
-                            Limpiar
+                            <input id="btnCancel" type="image" src="../images/botonlimpiar.jpg" onclick="CancelarArea();">
                         </label>
                     </div>
-                </td>
+                    
+                    <div id="divCancel" style="float: left;">
+                        <label  style="cursor: pointer;">
+                            <input id="btnCancel" type="image" src="../images/botonimprimir.jpg" onclick="CancelarArea();">
+                        </label>
+                    </div>
+                </td>                              
             </tr>
             <tr>
             <td colspan="3" align="center">
@@ -124,24 +119,28 @@ if ($_SESSION['user'] == "") {
                 RELACION de SUBAREAS </div>
                     <div id="frmResultado">
                     
-                    <table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
+                    <table class="fuente8" width="700px" cellspacing=0 cellpadding=3 border=0 ID="Table1">
                                     <tr class="cabeceraTabla">
                                             <td width="8%">ITEM</td>
                                             <td width="10%">DESCRIPCION</td>
                                             <td width="10%">ESTADO</td>
                                             <td width="13%">CODIGOAREA</td>
+                                            <td width="13%">ACCIONES</td>
                                     </tr>
                                     
                                         <?php
                                             $query = "select * from subareas";
                                             $result = mysql_query($query);
                                             
-                                            while($area = mysql_fetch_array($result)){?>
+                                            while($subarea = mysql_fetch_array($result)){?>
                                                 <tr>
-                                                    <td align="center"><?= $area['subareascodigo']?></td>
-                                                    <td align="center"><?= $area['subareasdescripcion']?></td>
-                                                    <td align="center"><?= $area['subareasestado']?></td>
-                                                    <td align="center"><?= $area['areascodigo']?></td>
+                                                    <td align="center"><?= $subarea['subareascodigo']?></td>
+                                                    <td align="center"><?= $subarea['subareasdescripcion']?></td>
+                                                    <td align="center"><?= $subarea['subareasestado']?></td>
+                                                    <td align="center"><?= $subarea['areascodigo']?></td>
+                                                    <td align="center">
+                                                        <a href="#" onclick="editSubArea('<?= $subarea['subareascodigo']?>');"><img src="../Imagenes/edit.png" width="24"></a>-<a href="#" onclick="viewArea('<?= $subarea['subareascodigo']?>');"><img src="../Imagenes/view.png" width="24"></a>-<a href="#" onclick="deleteArea('<?= $subarea['subareascodigo']?>');"><img src="../Imagenes/delete.png" width="24"></a>
+                                                    </td>
                                                 </tr>
                                             <?php }
                                         ?>

@@ -4,23 +4,17 @@ if ($_SESSION['user'] == "") {
     header("Location: ../login.php");
 }else{
     include('../Conexion/conexion.php');
-    $cn = Conectarse();
-    
+    $cn = Conectarse();    
     $rsdepar="select * from departamento";
     $depar = mysql_query($rsdepar);
-    
     $rsprov="select * from provincia";
     $prov = mysql_query($rsprov);
-    
     $rsdist="select * from distrito";
     $dist = mysql_query($rsdist);
-    
     $rscargo="select * from cargo";
     $cargo = mysql_query($rscargo);
-    
     $rsareas="select * from areas";
     $areas = mysql_query($rsareas);
-    
     $rssubareas="select * from subareas";
     $subareas = mysql_query($rssubareas);
 ?>
@@ -32,6 +26,7 @@ if ($_SESSION['user'] == "") {
         <script type="text/javascript" src="../js/Model.js"></script>
         <link rel="Stylesheet" type="text/css" href="../css/admin.css"/>
         <link rel="Stylesheet" type="text/css" href="../css/jquery-ui.css"/>
+        <link rel="Stylesheet" type="text/css" href="../css/estilos.css"/>
         <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
         <script type="text/javascript"  src="../js/Filtrar.js"></script>
         <script type="text/javascript" src="../js/Personal.js"></script>
@@ -198,27 +193,20 @@ if ($_SESSION['user'] == "") {
         <br>
         <table style="text-align: left; margin: 0 auto;color:#F08F01;font-size:11px;">
             <tr>
-                <td bgcolor="#E9F3FE">
-                    <div id="divSave" style="float: left;">
+                <td>
+                    <div id="divSave" style="float: left;margin-left: 35%">
                         <label style="cursor: pointer;" >
-                            <input id="btnSave" type="image" src="../images/guardar_1.png" onclick="GuardarPersonal();">
-                            Guardar
+                            <input id="btnSave" type="image" src="../images/botonaceptar.jpg" onclick="GuardarArea();">
+                         </label>
+                    </div>
+                     <div id="divCancel" style="float: left;">
+                        <label  style="cursor: pointer;">
+                            <input id="btnCancel" type="image" src="../images/botonlimpiar.jpg" onclick="CancelarArea();">
                         </label>
                     </div>
-                </td>
-                <td bgcolor="#E9F3FE">
-                    <div id="divEdit" style="float: left;">
+                     <div id="divCancel" style="float: left;">
                         <label  style="cursor: pointer;">
-                            <input id="btnEdit" type="image" src="../images/modificar.png">
-                            Modificar
-                        </label>
-                    </div>
-                </td>
-                <td bgcolor="#E9F3FE">
-                    <div id="divCancel" style="float: left;">
-                        <label  style="cursor: pointer;">
-                            <input id="btnCancel" type="image" src="../images/limpiar.png" onclick="CancelarPersonal();">
-                            Limpiar
+                            <input id="btnCancel" type="image" src="../images/botonimprimir.jpg" onclick="CancelarArea();">
                         </label>
                     </div>
                 </td>
@@ -229,7 +217,7 @@ if ($_SESSION['user'] == "") {
 			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
 			  	<tr>
                                     <?php
-                        $query_count = "select count(*) as total from personal";
+                        $query_count = "select count(*) as total from Personal";
                         $result_count = mysql_query($query_count);
                         $total = mysql_fetch_array($result_count);
                     ?>
@@ -243,11 +231,17 @@ if ($_SESSION['user'] == "") {
                 RELACION de PERSONAL </div>
                     <div id="frmResultado">
                     
-                    <table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
+                    <table class="fuente8" width="930px" cellspacing=0 cellpadding=2 border=0 ID="Table1">
                                     <tr class="cabeceraTabla">
-                                            <td width="8%">ITEM</td>
-                                            <td width="6%">DESCRIPCION</td>
-                                            <td width="13%">ESTADO</td>
+                                            <td width="2%">ITEM</td>
+                                            <td width="3%">DNI</td>
+                                            <td width="10%">NOMBRES</td>
+                                            <td width="10%">AP. PATERNO</td>
+                                            <td width="10%">AP. MATERNO</td>
+                                            <td width="5%">CELULAR</td>
+                                            <td width="8%">EMAIL</td>
+                                            <td width="13%">DIRECCION</td>
+                                            <td width="13%">ACCIONES</td>
                                     </tr>
                                     
                                         <?php
@@ -256,9 +250,17 @@ if ($_SESSION['user'] == "") {
                                             
                                             while($area = mysql_fetch_array($result)){?>
                                                 <tr>
-                                                    <td align="center"><?= $area['areascodigo']?></td>
-                                                    <td align="center"><?= $area['areasdescripcion']?></td>
-                                                    <td align="center"><?= $area['areasestado']?></td>
+                                                    <td align="center"><?= $area['personalcodigo']?></td>
+                                                    <td align="center"><?= $area['personaldni']?></td>
+                                                    <td align="center"><?= $area['personalnombres']?></td>
+                                                    <td align="center"><?= $area['personalpaterno']?></td>
+                                                    <td align="center"><?= $area['personalmaterno']?></td>
+                                                    <td align="center"><?= $area['personalcelular']?></td>
+                                                    <td align="center"><?= $area['personalemail']?></td>
+                                                    <td align="center"><?= $area['personaldireccion']?></td>
+                                                    <td align="center">
+                                                        <a href="#" onclick="editArea('<?= $area['areascodigo']?>');"><img src="../Imagenes/edit.png" width="24"></a>-<a href="#" onclick="viewArea('<?= $area['areascodigo']?>');"><img src="../Imagenes/view.png" width="24"></a>-<a href="#" onclick="deleteArea('<?= $area['areascodigo']?>');"><img src="../Imagenes/delete.png" width="24"></a>
+                                                    </td>
                                                     
                                                 </tr>
                                             <?php }

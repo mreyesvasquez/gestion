@@ -39,49 +39,23 @@ if ($_SESSION['user'] == "") {
     <body>
 
         <div id="contenedor">
-            <div id="cabecera">
-                <di id="bannerizquierda">
-                </di>
-                <div id="bannerderecha">
-                    <img src='../Imagenes/calendario.jpg' style="width: 20px; height: 20px">&nbsp;&nbsp;
-                    <script> fecha();</script> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src='../Imagenes/hora.png' style="width: 20px; height: 20px">&nbsp;&nbsp;
-                    Hora: <label id="hora"></label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <div id="inicio">
+                    <a href='Administrador.php'></a>
                 </div>
-            </div>
-            <div id="separacion"> 
-                <div id="inicio">
-                    <a href='Administrador.php'><img src="../Imagenes/Inicio.gif"></a>
-                </div>
-                <div id="subopciones">
-<!--                    Usted tiene acceso al siguiente perfil -->
-                    GERENCIA DE INGENIERIA CLINICA Y HOSPITALARIA |
-                     <!--<?php echo $_SESSION['areas'] ?> | &nbsp;&nbsp;&nbsp;&nbsp;-->
-                    OFICINA DE INGENIERIA HOSPITALARIA RALL
-                    <!-- <?php echo $_SESSION['subareas'] ?> |-->
-                </div> 
-            </div>
-            <div id="sep">
-                    <img src='../Imagenes/persona.png' style="width: 15px; height: 15px">&nbsp;
-                    <b>HOLA:</b>&nbsp;<?php echo $rpersonal['Personal'] ?> | &nbsp;&nbsp;
+                <div id="sep">
                     
+                    <img src='../Imagenes/users.png' style="width: 15px; height: 15px">&nbsp;
+                    <b>HOLA:</b>&nbsp;<?php echo $rpersonal['Personal'] ?> | &nbsp;&nbsp;                    
                     <img src='../Imagenes/usuario.png' style="width: 15px; height: 15px">&nbsp;
-                    <b>USUARIO:</b>&nbsp;<?php echo $_SESSION['user'] ?> | &nbsp;&nbsp;
-                    
-<!--                    <img src='../Imagenes/actulizar.png' style="width: 15px; height: 15px">&nbsp;
-                    <a onclick="CambiarClave();" style=" cursor: pointer;">CAMBIAR CLAVE</a> &nbsp; | &nbsp;&nbsp;
-                    
-                    <img src='../Imagenes/buscar.png' style="width: 15px; height: 15px">&nbsp;
-                    <a onclick="DatosPersonal();" style=" cursor: pointer;">MIS DATOS</a> &nbsp; | &nbsp;&nbsp;-->
-                    
+                    <b>USUARIO:</b>&nbsp;<?php echo $_SESSION['user'] ?> | &nbsp;&nbsp;                         
                     <img src='../Imagenes/cancelar.png' style="width: 15px; height: 15px">&nbsp;
                     <a onclick="CerrarSesion();" style=" cursor: pointer;">CERRAR SESION</a> &nbsp;&nbsp;  
-            </div>
+                 </div>
             <div id="cuerpo">
-
                 <div id="cuerpo_izquierda">
+                    <div class="image-menu" style="text-align: center">
+                        <img src="../Images/logo_gestion.png" width="150">
+                    </div>
                     <div id="menu">
                         <nav>
                             <div id="acdnmenu" style="width:100%;height:100%; padding: 0px 0px 0px 0px;">

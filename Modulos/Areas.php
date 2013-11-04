@@ -66,28 +66,26 @@ if ($_SESSION['user'] == "") {
             </fieldset>
         
         <br>
-        <table style="text-align: left; margin: 0 auto;color:#F08F01;font-size:11px;">
+        <table style="text-align: left; margin: 0 auto;color:blue;font-size:11px;">
             <tr>
-                <td bgcolor="#E9F3FE" valign="middle" align="center" colspan="3" style="text-align: center !important">
+                <td>                   
                     <div id="divSave" style="float: left;margin-left: 35%">
                         <label style="cursor: pointer;" >
-                            <input id="btnSave" type="image" src="../images/guardar_1.png" onclick="GuardarArea();">
-                            Guardar
-                        </label>
+                            <input id="btnSave" type="image" src="../images/botonaceptar.jpg" onclick="GuardarArea();">
+                         </label>
                     </div>
-                    <div id="divEdit" style="float: left;">
+                    <div id="divCancel" style="float: left;">
                         <label  style="cursor: pointer;">
-                            <input id="btnEdit" type="image" src="../images/modificar.png">
-                            Modificar
+                            <input id="btnCancel" type="image" src="../images/botonlimpiar.jpg" onclick="CancelarArea();">
                         </label>
                     </div>
                     <div id="divCancel" style="float: left;">
                         <label  style="cursor: pointer;">
-                            <input id="btnCancel" type="image" src="../images/limpiar.png" onclick="CancelarArea();">
-                            Limpiar
+                            <input id="btnCancel" type="image" src="../images/botonimprimir.jpg" onclick="CancelarArea();">
                         </label>
                     </div>
                 </td>
+               
             </tr>
            <tr>
             <td colspan="3" align="center">
@@ -95,12 +93,12 @@ if ($_SESSION['user'] == "") {
 			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
 			  	<tr>
                                     <?php
-                        $query_count = "select count(*) as total from subareas";
+                        $query_count = "select count(*) as total from areas";
                         $result_count = mysql_query($query_count);
                         $total = mysql_fetch_array($result_count);
                     ?>
-                                    <td width="50%" align="left">N de Sub Areas encontradas <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly value="<?= $total['total']?>" style="text-align: center; font-size: 12px;"></td>
-				<td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
+                      <td width="50%" align="left">N° de  Areas encontradas <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly value="<?= $total['total']?>" style="text-align: center; font-size: 12px;"></td>
+                        <td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
 		          </select></td>
 			  </table>
             </div>
@@ -109,7 +107,7 @@ if ($_SESSION['user'] == "") {
                 RELACION de AREAS </div>
                     <div id="frmResultado">
                     
-                    <table class="fuente8" width="100%" cellspacing=0 cellpadding="10" border=0 ID="Table1">
+                    <table class="fuente8" width="600px" cellspacing=0 cellpadding="10" border=0 ID="Table1">
                                     <tr class="cabeceraTabla">
                                             <td width="8%">ITEM</td>
                                             <td width="6%">DESCRIPCION</td>
