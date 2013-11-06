@@ -98,32 +98,22 @@ if ($_SESSION['user'] == "") {
             </fieldset>
         
         <br>
-        <table style="text-align: left; margin: 0 auto;color:#F08F01;font-size:11px;">
+        <table style="text-align: left; margin: 0 auto;color:#blue;font-size:11px;">
             <tr>
-                <td bgcolor="#E9F3FE">
-                    <div id="divSave" style="float: left;">
+                <td>
+                    <div id="divSave" style="float: left;margin-left: 35%">
                         <label style="cursor: pointer;" >
-                            <input id="btnSave" type="image" src="../images/guardar_1.png" onclick="GuardarUsuario();">
-                            Guardar
-                        </label>
+                            <input id="btnSave" type="image" src="../images/botonaceptar.jpg" onclick="GuardarArea();">
+                         </label>
                     </div>
-                </td>
-<!--                <td bgcolor="#E9F3FE">
-                    <div id="divEdit" style="float: left;">
-                        <label  style="cursor: pointer;">
-                            <input id="btnEdit" type="image" src="../images/modificar.png">
-                            Modificar
-                        </label>
-                    </div>
-                </td>-->
-                <td bgcolor="#E9F3FE">
+                    
                     <div id="divCancel" style="float: left;">
                         <label  style="cursor: pointer;">
-                            <input id="btnCancel" type="image" src="../images/limpiar.png" onclick="CancelarUsuario();">
-                            Limpiar
+                            <input id="btnCancel" type="image" src="../images/botonlimpiar.jpg" onclick="CancelarArea();">
                         </label>
                     </div>
                 </td>
+               
             </tr>
         </table>
         </center>

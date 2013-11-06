@@ -52,8 +52,8 @@ if ($_SESSION['user'] == "") {
                             <select name="cboareas" id="cboareas" class="Caja">
                                 <option value="">Seleccionar</option>
                                 <?php while ($rsgerencias=mysql_fetch_array($gerencias)) {?>
-                                <option value="<?php echo $rsgerencias['areascodigo'] ?>">
-                                <?php echo $rsgerencias['areasdescripcion'] ?></option>
+                                <option value="<?php echo $rsgerencias['subareascodigo'] ?>">
+                                <?php echo $rsgerencias['subareasdescripcion'] ?></option>
                                 <?php } ?>
                             </select>
                         </td>
